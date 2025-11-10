@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Gemini API</title>
+</head>
+<body>
+  <h1>Generate Text</h1>
+  <textarea id="inputText" placeholder="Enter text here"></textarea><br><br>
+  <button onclick="generate()">Generate</button>
+  <pre id="output"></pre>
+
+  <script>
+    async function generate() {
+      const text = document.getElementById('inputText').value;
+      try {
+        const response = await fetch("http://localhost:4000/api/generate", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ text: text, mode: "summary" })
+        });
+        const data = await response.json();
+        document.getElementById('output').innerText = JSON.stringify(data, null, 2);
+      } catch (err) {
+        console.error(err);
+        document.getElementById('output').innerText = "Error: " + err.message;
+      }
+    }
+  </script>
+</body>
+</html>
