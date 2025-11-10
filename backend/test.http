@@ -1,0 +1,10 @@
+GET http://localhost:4000/
+###
+POST http://localhost:4000/api/generate
+Content-Type: application/json
+
+{
+  "text": "Explain Newton's second law of motion like you are explaining for a five year old kid"
+}
+
+
