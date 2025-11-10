@@ -43,35 +43,20 @@ Copy code
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Clone the Repository
-
-```bash
 git clone https://github.com/<your-username>/StudyHelper.git
 cd StudyHelper
 2️⃣ Setup the Backend
-bash
-Copy code
 cd backend
 npm install
 Create a .env file inside the backend/ folder:
-
-ini
-Copy code
 GEMINI_API_KEY=your_google_gemini_api_key_here
 PORT=4000
 Start the backend:
-
-bash
-Copy code
 npm start
 ✅ Expected output:
-
-arduino
-Copy code
 ✅ Gemini client initialized
 🚀 Backend running on port 4000
 3️⃣ Setup the Frontend
-bash
-Copy code
 cd ../frontend
 npm install
 npm start
@@ -94,9 +79,6 @@ Environment	Node.js + npm
 
 🔐 Environment Variables
 Create a .env file inside /backend with:
-
-ini
-Copy code
 GEMINI_API_KEY=your_google_gemini_api_key
 PORT=4000
 ⚠️ Do not commit .env — it’s excluded by .gitignore
@@ -124,13 +106,6 @@ Open a Pull Request
 This project is licensed under the MIT License.
 
 ✨ Author
-Developed by Your Name
+Developed by Disha Shetty
 Powered by Google Gemini API 💫
 
-yaml
-Copy code
-
-
----
-
-Would you like me to add **deployment instructions (Render for backend + Vercel for frontend)** at the bottom so it’s ready to host online?
